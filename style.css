@@ -1,0 +1,501 @@
+
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* Sayfa genelinde kullanılan yazı tipi */
+    background-color: #f1f1f1; /* Sayfa arka plan rengi */
+    margin: 0; /* Sayfa kenar boşluklarını sıfırlar */
+    padding: 0; /* Sayfa içi boşlukları sıfırlar */
+    color: #000000; /* Yazı rengi */
+    text-align: center; /* Yazıyı ortalar */
+}
+
+header {
+    background-color: #301ea7; /* Başlık kısmının arka plan rengi */
+    color: white; /* Başlık yazı rengi */
+    padding: 20px; /* Başlık etrafındaki iç boşluk */
+    text-align: center; /* Başlık metnini ortalar */
+}
+
+header h1 {
+    margin: 0; /* Başlık altındaki boşluğu sıfırlar */
+}
+
+footer {
+    background-color: #2f312f; /* Altbilgi arka plan rengi */
+    color: white; /* Altbilgi yazı rengi */
+    text-align: center; /* Altbilgi metnini ortalar */
+    padding: 20px; /* Altbilgi etrafındaki iç boşluk */
+    margin-top: 40px; /* Üstten boşluk ekler */
+}
+
+/* Navigasyon Menüsü            */
+
+nav ul {
+    list-style: none; /* Liste simgelerini kaldırır */
+    padding: 0; /* Liste içi boşlukları sıfırlar */
+    margin: 0; /* Liste dışı boşlukları sıfırlar */
+    background-color: #301ea7; /* Menü arka plan rengi */
+    display: flex; /* Flexbox düzeni */
+    justify-content: center; /* Menü öğelerini ortalar */
+    flex-wrap: wrap; /* Elemanları taşır */
+}
+
+nav ul li {
+    margin: 5px 10px; /* Menü öğeleri arasına boşluk ekler */
+}
+
+nav ul li a {
+    color: white; /* Bağlantı yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    padding: 10px 15px; /* Bağlantı etrafındaki iç boşluk */
+    display: block; /* Bağlantıyı blok seviyesine getirir */
+    transition: background-color 0.3s; /* Arka plan rengi değişimini yumuşatır */
+}
+
+nav ul li a:hover {
+    background-color: #301ea7; /* Üzerine gelindiğinde arka plan rengi */
+    border-radius: 5px; /* Kenarları yuvarlatır */
+}
+
+
+/* Hakkında Bölümü              */
+
+#about {
+    padding: 40px 20px; /* İç boşluk */
+    background-color: #f7f7f7; /* Arka plan rengi */
+    max-width: 900px; /* Maksimum genişlik */
+    margin: auto; /* Ortalar */
+}
+
+#about h2 {
+    font-size: 2em; /* Başlık font büyüklüğü */
+    margin-bottom: 20px; /* Altındaki boşluk */
+}
+
+#about p {
+    font-size: 1.1em; /* Paragraf yazı boyutu */
+    line-height: 1.6; /* Satır yüksekliği */
+}
+
+#about ul {
+    list-style-type: disc; /* Listeyi noktalı yapar */
+    text-align: left; /* Listeyi sola hizalar */
+    margin: 20px auto; /* Liste etrafındaki boşluk */
+    max-width: 500px; /* Maksimum genişlik */
+    font-size: 1.1em; /* Yazı boyutu */
+    line-height: 1.8; /* Satır yüksekliği */
+}
+
+/* ============================= */
+/* Albüm Bölümü                 */
+/* ============================= */
+#albums {
+    display: flex; /* Flexbox düzeni */
+    justify-content: space-evenly; /* Öğeleri eşit olarak yerleştirir */
+    align-items: center; /* Öğeleri dikeyde ortalar */
+    gap: 20px; /* Elemanlar arasındaki boşluk */
+    padding: 40px 20px; /* İç boşluk */
+    background-color: #fff; /* Arka plan rengi */
+    flex-wrap: wrap; /* Elemanları sarmalayıp taşır */
+}
+
+#albums a {
+    flex: 1 1 250px; /* Flex öğesini ayarlar */
+    max-width: 250px; /* Maksimum genişlik */
+    display: block; /* Bağlantıyı blok seviyesine getirir */
+    text-align: center; /* Metni ortalar */
+}
+
+#albums img {
+    width: 100%; /* Görselin genişliğini %100 yapar */
+    height: auto; /* Yüksekliği otomatik olarak ayarlar */
+    border-radius: 8px; /* Kenarları yuvarlatır */
+    box-shadow: 0 4px 6px rgba(147, 200, 32, 0.1); /* Gölgelendirme ekler */
+    transition: transform 0.3s ease; /* Dönüşüm animasyonu */
+}
+
+#albums img:hover {
+    transform: scale(1.05); /* Görselin üzerine gelindiğinde büyür */
+}
+
+/* Albüm Bilgisi */
+#album-info ul {
+    display: flex; /* Flexbox düzeni */
+    flex-direction: column; /* Listeyi dikey yapar */
+    align-items: center; /* Elemanları ortalar */
+    padding: 0; /* İç boşluk sıfırlanır */
+    margin: 0; /* Dış boşluk sıfırlanır */
+    list-style-type: disc; /* Listeyi noktalı yapar */
+}
+
+#album-info ul li {
+    margin-bottom: 10px; /* Liste öğeleri arasındaki boşluk */
+}
+
+
+/* Göster Sayfası  */
+
+.card-container {
+    max-width: 800px; /* Maksimum genişlik */
+    margin: 40px auto; /* Ortalar ve üst boşluk ekler */
+    padding: 0 20px; /* İç boşluk */
+}
+
+.info-card {
+    background-color: #fff; /* Arka plan rengi */
+    margin-bottom: 20px; /* Alt boşluk */
+    padding: 20px; /* İç boşluk */
+    border-radius: 10px; /* Kenarları yuvarlatır */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+}
+
+.info-card p {
+    margin: 10px 0; /* Paragraflar arasındaki boşluk */
+    font-size: 1em; /* Yazı boyutu */
+}
+
+
+/* Oyun Sayfası */
+
+.container {
+    padding: 20px; /* İç boşluk */
+}
+
+h1 {
+    color: #333; /* Başlık yazı rengi */
+}
+
+.song {
+    font-size: 1.5em; /* Şarkı font boyutu */
+    margin: 20px 0; /* Yüksekliği artırmak için boşluk */
+}
+
+.options {
+    margin: 20px 0; /* Seçenekler için boşluk */
+}
+
+.options button {
+    padding: 10px 20px; /* Düğme iç boşlukları */
+    margin: 5px; /* Düğmeler arasındaki boşluk */
+    font-size: 1em; /* Düğme yazı boyutu */
+    background-color: #301ea7; /* Düğme arka plan rengi */
+    color: white; /* Düğme yazı rengi */
+    border: none; /* Kenarlık yok */
+    border-radius: 5px; /* Yuvarlak kenarlar */
+    cursor: pointer; /* Fareyi tıklanabilir yapar */
+    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+}
+
+.options button:hover {
+    background-color: #301ea7; /* Üzerine gelindiğinde arka plan rengi değişir */
+}
+
+.result {
+    margin-top: 20px; /* Sonuç kısmına üst boşluk */
+    font-size: 1.2em; /* Sonuç yazı boyutu */
+}
+
+
+/* Diğer Albümler  */
+
+#other-albums {
+    background-color: #fff; /* Arka plan rengi */
+    padding: 40px 20px; /* İç boşluk */
+    margin-top: 50px; /* Üst boşluk */
+    border-top: 2px solid #ddd; /* Üst kenar çizgisi */
+    text-align: center; /* Metni ortalar */
+}
+
+#other-albums h3 {
+    font-size: 1.8em; /* Başlık font boyutu */
+    color: #301ea7; /* Başlık yazı rengi */
+    margin-bottom: 25px; /* Alt boşluk */
+}
+
+#other-albums ul {
+    list-style: none; /* Liste simgelerini kaldırır */
+    padding: 0; /* İç boşluğu sıfırlar */
+    margin: 0; /* Dış boşluğu sıfırlar */
+    display: flex; /* Flex düzeni */
+    justify-content: center; /* Öğeleri ortalar */
+    gap: 25px; /* Öğeler arasındaki boşluk */
+    flex-wrap: wrap; /* Taşma engellenir ve öğeler sarılır */
+}
+
+#other-albums li {
+    margin: 10px; /* Liste öğeleri arasındaki boşluk */
+}
+
+#other-albums a {
+    background-color: #301ea7; /* Bağlantı arka plan rengi */
+    color: #fff; /* Yazı rengi */
+    padding: 10px 18px; /* İç boşluk */
+    border-radius: 6px; /* Kenarları yuvarlatır */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    font-size: 1em; /* Yazı boyutu */
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+    display: inline-block; /* Bağlantıyı blok yapar */
+}
+
+#other-albums a:hover {
+    background-color: #301ea7; /* Üzerine gelindiğinde arka plan rengi değişir */
+}
+
+
+/* Benzer Sanatçılar  */
+
+.artist-grid {
+    display: grid; /* Grid düzeni */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Esnek sütun yapısı */
+    gap: 20px; /* Elemanlar arasındaki boşluk */
+    padding: 20px; /* İç boşluk */
+    justify-items: center; /* Öğeleri ortalar */
+}
+
+.artist-card {
+    background-color: #fff; /* Arka plan rengi */
+    border-radius: 10px; /* Kenarları yuvarlatır */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+    width: 250px; /* Genişlik */
+    text-align: center; /* Metni ortalar */
+    padding: 20px; /* İç boşluk */
+}
+
+.artist-card img {
+    width: 100%; /* Görselin genişliği */
+    height: 250px; /* Görselin yüksekliği */
+    object-fit: cover; /* Görselin içeriğini kesmeden yerleştirir */
+    border-radius: 10px; /* Kenarları yuvarlatır */
+}
+
+.artist-card h2 {
+    font-size: 1.5em; /* Başlık yazı boyutu */
+    margin: 15px 0; /* Başlık ile içerik arasındaki boşluk */
+}
+
+.artist-card p {
+    font-size: 1em; /* Yazı boyutu */
+    color: #666; /* Yazı rengi */
+}
+
+.artist-card a {
+    display: inline-block; /* Bağlantıyı blok yapar */
+    margin-top: 15px; /* Üst boşluk */
+    padding: 10px 20px; /* İç boşluk */
+    background-color: #301ea7; /* Arka plan rengi */
+    color: white; /* Yazı rengi */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    border-radius: 5px; /* Kenarları yuvarlatır */
+    font-weight: bold; /* Kalın yazı */
+}
+
+.artist-card a:hover {
+    background-color: #301ea7; /* Üzerine gelindiğinde arka plan rengi değişir */
+}
+
+/* Mobil Uyum  */
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Menüyü dikey yapar */
+        align-items: center; /* Menü öğelerini ortalar */
+    }
+
+    #albums {
+        flex-direction: column; /* Albümleri dikey hizalar */
+        align-items: center; /* Albümleri ortalar */
+        gap: 10px; /* Albümler arasındaki boşluk */
+    }
+
+    #albums a {
+        flex: 1 1 100%; /* Albüm genişliğini %100 yapar */
+    }
+
+    #about ul {
+        text-align: center; /* Listeyi ortalar */
+    }
+
+    .form-container {
+        padding: 20px; /* İç boşluk */
+        margin: 20px; /* Dış boşluk */
+    }
+
+    button {
+        width: 100%; /* Düğmelerin genişliğini %100 yapar */
+    }
+
+    .card-container {
+        padding: 0 10px; /* İç boşluk */
+    }
+
+    .info-card {
+        padding: 15px; /* İç boşluk */
+    }
+
+    .info-card p {
+        font-size: 0.95em; /* Yazı boyutunu küçültür */
+    }
+
+    #other-albums ul {
+        flex-direction: column; /* Listeyi dikey yapar */
+        align-items: center; /* Liste öğelerini ortalar */
+        gap: 15px; /* Öğeler arasındaki boşluk */
+    }
+
+    #other-albums a {
+        width: 80%; /* Bağlantı genişliğini %80 yapar */
+        font-size: 1.1em; /* Yazı boyutunu büyütür */
+    }
+}
+/* Oyun Sayfası  */
+
+body {
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    text-align: center; /* Metni ortalar */
+    margin-top: 50px; /* Üstten boşluk */
+    background-color: #e4e0e0; /* Arka plan rengi */
+}
+
+h1 {
+    margin-bottom: 30px; /* Başlık ile altındaki öğe arasındaki boşluk */
+}
+
+#song {
+    font-size: 20px; /* Şarkı yazısının font boyutu */
+    margin-bottom: 20px; /* Şarkı ile altındaki öğe arasındaki boşluk */
+}
+
+button {
+    margin: 10px; /* Düğme etrafındaki boşluk */
+    padding: 10px 20px; /* Düğme içindeki boşluk */
+    font-size: 16px; /* Düğme yazı boyutu */
+    cursor: pointer; /* Fareyi üzerine getirdiğinde işaretçi değişir */
+}
+
+#result {
+    margin-top: 20px; /* Sonuç ile üstteki öğe arasındaki boşluk */
+    font-weight: bold; /* Sonuç yazısını kalın yapar */
+    font-size: 18px; /* Sonuç yazı boyutu */
+}
+
+
+/* Form Sayfası */
+
+body {
+  font-family: 'Segoe UI', sans-serif; /* Yazı tipi */
+  background-color: #f2f2f2; /* Arka plan rengi */
+  margin: 0; /* Dış boşlukları sıfırlar */
+  padding: 0; /* İç boşlukları sıfırlar */
+}
+
+.header {
+  background-color: #301ea7; /* Başlık arka plan rengi */
+  color: white; /* Yazı rengi */
+  padding: 20px 0; /* İç boşluk */
+  text-align: center; /* Metni ortalar */
+}
+
+.header-title {
+  margin: 0; /* Başlık altındaki boşluğu sıfırlar */
+}
+
+.nav {
+  margin-top: 10px; /* Navigasyon ile üst öğe arasındaki boşluk */
+}
+
+.nav-list {
+  display: flex; /* Flexbox düzeni */
+  justify-content: center; /* Öğeleri yatayda ortalar */
+  list-style: none; /* Liste simgelerini kaldırır */
+  gap: 15px; /* Liste öğeleri arasındaki boşluk */
+  padding: 0; /* İç boşlukları sıfırlar */
+}
+
+.nav-list a {
+  color: white; /* Bağlantı yazı rengi */
+  text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+.main {
+  padding: 30px; /* Ana içerik etrafındaki iç boşluk */
+}
+
+.form-section {
+  max-width: 600px; /* Maksimum genişlik */
+  background-color: white; /* Arka plan rengi */
+  padding: 25px; /* İç boşluk */
+  margin: auto; /* Ortalar */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Gölgelendirme efekti */
+  border-radius: 10px; /* Yuvarlatılmış kenarlar */
+}
+
+.form {
+  display: flex; /* Flex düzeni */
+  flex-direction: column; /* Öğeleri dikey hizalar */
+}
+
+.form-label {
+  margin-top: 15px; /* Etiket ile üst öğe arasındaki boşluk */
+  font-weight: bold; /* Etiketi kalın yapar */
+}
+
+.form-input,
+.form-textarea {
+  padding: 10px; /* İç boşluk */
+  font-size: 14px; /* Yazı boyutu */
+  margin-top: 5px; /* Etiket ile giriş alanı arasındaki boşluk */
+  border-radius: 5px; /* Yuvarlatılmış kenarlar */
+  border: 1px solid #ccc; /* Kenarlık */
+}
+
+.form-radio-group {
+  display: flex; /* Flex düzeni */
+  gap: 15px; /* Seçenekler arasındaki boşluk */
+  margin-top: 5px; /* Üst boşluk */
+}
+
+.form-button {
+  margin-top: 20px; /* Düğme ile üst öğe arasındaki boşluk */
+  padding: 12px; /* Düğme içi boşluk */
+  background-color: #301ea7; /* Düğme arka plan rengi */
+  color: white; /* Yazı rengi */
+  border: none; /* Kenarlık yok */
+  border-radius: 5px; /* Yuvarlatılmış kenarlar */
+  font-size: 15px; /* Yazı boyutu */
+  cursor: pointer; /* Fareyi üzerine getirdiğinde işaretçi değişir */
+  transition: background 0.3s ease; /* Arka plan geçişi */
+}
+
+.form-button:hover {
+  background-color: #301ea7; /* Üzerine gelindiğinde arka plan rengi değişir */
+}
+
+.table-section {
+  max-width: 800px; /* Maksimum genişlik */
+  margin: 40px auto; /* Ortalar ve üst boşluk */
+  background-color: white; /* Arka plan rengi */
+  padding: 20px; /* İç boşluk */
+  border-radius: 10px; /* Yuvarlatılmış kenarlar */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Gölgelendirme efekti */
+}
+
+.table-title {
+  text-align: center; /* Başlık ortalanır */
+  margin-bottom: 20px; /* Alt boşluk */
+}
+
+.form-table {
+  width: 100%; /* Tablo genişliği */
+  border-collapse: collapse; /* Çizgiler birleşir */
+}
+
+.form-table th,
+.form-table td {
+  padding: 12px; /* Hücre içi boşluk */
+  border: 1px solid #ddd; /* Kenarlık */
+  text-align: center; /* Metin ortalanır */
+}
+
+.form-table th {
+  background-color: #efefef; /* Başlık hücrelerinin arka plan rengi */
+}
