@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaydedilen Veriler</title>
+    <link rel="stylesheet" href="style.css"> <!-- CSS dosyasını burada bağlıyoruz -->
+</head>
+<body>
+    <header>
+        <h1>Kaydedilen Veriler</h1>
+    </header>
+ <header>
+        <h1>Şebnem Ferah - Albümler</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="form.html">Form Sayfası</a></li>
+                <li><a href="iletişim.html">İletişim</a></li>
+                <li><a href="oyun.html">Oyun</a></li>
+                <li><a href="benzersanatcilar.html">Benzer Sanatçılar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Ad Soyad</th>
+                <th>Telefon Numarası</th>
+                <th>Cinsiyet</th>
+                <th>Yaş</th>
+            </tr>
+            <tr>
+                <td id="showName"></td>
+                <td id="showPhone"></td>
+                <td id="showGender"></td>
+                <td id="showAge"></td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>© 2025 Kaydedilen Veriler</p>
+    </footer>
+
+    <script>
+        // Verileri localStorage'tan al
+        let name = localStorage.getItem("name");
+        let phone = localStorage.getItem("phone");
+        let gender = localStorage.getItem("gender");
+        let age = localStorage.getItem("age");
+
+        // Eğer veriler varsa, tabloyu doldur
+        if (name && phone && gender && age) {
+            document.getElementById("showName").innerText = name;
+            document.getElementById("showPhone").innerText = phone;
+            document.getElementById("showGender").innerText = gender;
+            document.getElementById("showAge").innerText = age;
+        } else {
+            alert("Henüz kaydedilmiş veriler yok.");
+        }
+    </script>
+    
+    <footer>
+        <p>© 2025 Şebnem Ferah | Tüm Hakları Saklıdır <br>Bu web sitesi resmi bir sayfa değildir. </p>
+    </footer>
+
+</body>
+</html>
