@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>İletişim Formu</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="form.js"></script>
+
+</head>
+<body>
+  <header class="header">
+    <h1 class="header-title">İletişim Formu</h1>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="form.html">Form</a></li>
+        <li><a href="iletişim.html">İletişim</a></li>
+        <li><a href="oyun.html">Oyun</a></li>
+        <li><a href="benzersanatcilar.html">Benzer Sanatçılar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="form-section">
+      <form id="contactForm" class="form">
+        <label class="form-label" for="name">Ad Soyad</label>
+        <input class="form-input" type="text" id="name" name="name" required />
+
+        <label class="form-label" for="email">E-posta</label>
+        <input class="form-input" type="email" id="email" name="email" required />
+
+        <label class="form-label">Cinsiyet</label>
+        <div class="form-radio-group">
+          <label><input type="radio" name="gender" value="Kadın" required /> Kadın</label>
+          <label><input type="radio" name="gender" value="Erkek" /> Erkek</label>
+          <label><input type="radio" name="gender" value="Diğer" /> Diğer</label>
+        </div>
+
+        <label class="form-label" for="message">Mesaj</label>
+        <textarea class="form-textarea" id="message" name="message" rows="4" required></textarea>
+
+        <button class="form-button" type="submit">Gönder</button>
+      </form>
+    </section>
+
+    <section class="table-section">
+      <h2 class="table-title">Gönderilen Mesajlar</h2>
+      <table class="form-table">
+        <thead>
+          <tr>
+            <th>Ad Soyad</th>
+            <th>E-posta</th>
+            <th>Cinsiyet</th>
+            <th>Mesaj</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- JavaScript ile doldurulacak -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const gender = document.querySelector("input[name='gender']:checked").value;
+      const message = document.getElementById("message").value;
+
+      const table = document.getElementById("tableBody");
+      const row = document.createElement("tr");
+
+      row.innerHTML = `
+        <td>${name}</td>
+        <td>${email}</td>
+        <td>${gender}</td>
+        <td>${message}</td>
+      `;
+
+      table.appendChild(row);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
